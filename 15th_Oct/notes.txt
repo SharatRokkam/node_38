@@ -1,0 +1,42 @@
+What is Node.JS?
+
+--> Node.JS is cross platform, open source javascript runtime environment that can run on windows, linux, unix, MacOS and more. Nodejs runs chrome's V8 engine and executes javascript code outside a web browser.
+
+--> Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+
+-->It is maintained by the OpenJS Foundation.
+
+-->Node.js allows JavaScript to be executed outside of a web browser
+*****This means that while JavaScript is traditionally associated with the web and
+browsers, Node.js extends its reach, allowing you to run JavaScript code on
+servers, desktops, and even embedded systems. This is why Node.js is often
+described with the phrase "Run JavaScript Everywhere.*****
+
+--> Node.js features an event-driven architecture and supports asynchronous
+I/O (non-blocking I/O).
+
+***********************************************************************************
+
+History 
+
+--> NodeJS was built by Ryan Dahl in 2009
+
+--> To run the JS, you always need an JS engine.
+
+--> Everywhere you write JS code, there is an JS engine, that executes the code.
+
+--> Ryan started with the Spider-Monkey Js Engine, which is found on Firefox.
+but in two days he tried using v8 and never looked back.
+
+--> earlier, Ryan was working independently, but there was a company named
+Joyent, and this company was working on something similar to NodeJS. and
+they hire Ryan to work under us, we will fund your project. big contribution to
+Joyent Company.
+
+--> The earlier name of Node.js was Web.js, but Ryan Dahl later renamed it to
+Node.js because it was intended to be used for more than just web servers.
+Apache HTTP Server was a blocking server, so Ryan wanted to create a nonblocking server, which is why Node.js is a non-blocking I/O.The advantage of
+a non-blocking server is that it can handle multiple requests with a smaller
+number of threads.
+In 2010, NPM (Node Package Manager) was introduced. NPM is a package
+manager for Node.js, and it played a critical role in the success of Node.js.

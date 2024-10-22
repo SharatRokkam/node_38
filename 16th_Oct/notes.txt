@@ -1,0 +1,22 @@
+Modules and Package 
+
+--> A Module is simply a file that contains a code..
+
+Types of Modules :
+1. Core Module - imported coz it is a part of nodejs
+Example : http, os, file system...
+
+2. Local Module
+Example : you can create it to provide some functionality to your application..
+
+3. Third Party Module
+Example : 
+
+--> A package is collection of files(modules) that are bundled together to provide some functionality to your application
+
+Example : Axios, react-router-dom, tanstack query
+
+**********************************************************************************
+
+Exports and Imports :
+COMMONJS Module and ES6 Module
