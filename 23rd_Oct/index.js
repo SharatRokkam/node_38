@@ -34,12 +34,19 @@ app.use(express.static("public"));
 // };
 
 // API - Endpoints
-app.get("/", function (req, res) {
+app.get("/getAllUser", function (req, res) {
+  // response.sendFile("./index.html");
+  res.json({ type: "get" });
+});
+app.get("/getAllUser/:id", function (req, res) {
   // response.sendFile("./index.html");
   res.json({ type: "get" });
 });
 
-app.post("/", (req, res) => {
+app.post("/createUser", (req, res) => {
+  res.json({ type: "post" });
+});
+app.post("/updateUser", (req, res) => {
   res.json({ type: "post" });
 });
 
