@@ -1,0 +1,28 @@
+1 . Basic HTTP Server and Routing
+Create a simple HTTP server using Node's http module that responds to the following routes:
+GET / - Respond with "Welcome to the Node.js HTTP Server!"
+GET /about - Respond with "This is the about page."
+POST /submit - Accept form data and respond with "Data received!"
+
+
+2. File System Operations (fs)
+Using Node's fs module:
+Create a new file called notes.txt and write some text content into it.
+Read and display the content of notes.txt in the console.
+Append new content to notes.txt, then read and log the updated content.
+Delete notes.txt after verifying it exists.
+
+3. Basic CRUD with Express and JSON Storage
+Build a simple Express server that manages a collection of items (e.g., a list of books). Store the data in a JSON file and implement CRUD operations:
+GET /books - Retrieve and display all books.
+POST /books - Add a new book to the collection.
+PUT /books/:id - Update details of a specific book by its ID.
+DELETE /books/:id - Remove a specific book from the collection.
+
+4. Routing and Middleware in Express
+Set up a mini Express app with the following routes:
+GET / - Display a welcome message.
+GET /products - Respond with a JSON array of products.
+POST /products - Accept product data and add it to your array.
+Create a custom middleware that logs the route accessed and the timestamp.
+Add error handling middleware to catch any unexpected issues and respond with a 500 status code and a friendly message.
