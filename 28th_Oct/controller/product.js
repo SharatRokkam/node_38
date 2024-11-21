@@ -16,14 +16,17 @@ exports.getProduct = (req, res) => {
   const id = Number(req.params.id);
   const product = products.find((p) => p.id == id);
   console.log(product);
+  if (!product) {
+    return res.status(404).json({ message: "User Not Found" });
+  }
   res.status(200).json(product);
 };
 
 exports.replaceProduct = (req, res) => {
-  const id = Number(req.params.id);
-  const productIndex = products.findIndex((p) => p.id == id);
-  products.splice(productIndex, 1, { id: id, ...req.body });
-  res.status(201).json({ message: "product replace successfully" });
+  // const id = Number(req.params.id);
+  // const productIndex = products.findIndex((p) => p.id == id);
+  // products.splice(productIndex, 1, { id: id, ...req.body });
+  // res.status(201).json({ message: "product replace successfully" });
 };
 
 exports.updateProduct = (req, res) => {
