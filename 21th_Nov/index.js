@@ -1,8 +1,10 @@
 const express = require("express");
 const PORT = 8001;
+const path = require("path");
 const urlRoute = require("./routes/url");
 const { connectToMongoDB } = require("./connect.js");
 const URL = require("./models/url.js");
+const staticRoute = require("./routes/staticRoute.js");
 
 const app = express();
 
@@ -10,9 +12,27 @@ connectToMongoDB("mongodb://localhost:27017/shortUrl")
   .then(() => console.log("mongoDb connected"))
   .catch((error) => console.log(error));
 
-app.use(express.json());
-app.use("/url", urlRoute);
+app.set("view engine", "ejs");
+app.set("views", path.resolve("./views"));
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use("/url", urlRoute);
+app.use("/", staticRoute);
+
+// app.get("/test", async (req, res) => {
+//   const allURLs = await URL.find({});
+//   res.send(`
+//     <html>
+//       <head></head>
+//       <body>
+//       ${allURLs.map(
+//         (url) =>
+//           `<li>${url.shortId} - ${url.redirectURL} - ${url.visitHistory.length}</li>`
+//       )}
+//       </body>
+//     </html>`);
+// });
 
 app.get("/:shortId", async (req, res) => {
   const shortId = req.params.shortId;

@@ -4,10 +4,14 @@ Design a URL Shortener service that takes in a valid URL and returns shortened U
 
 Also keep the track of total click/clicks on the URL
 
-Routes :
+Routes : API/ Endpoint
 POST /URL - Generates new URL and returns the shortened URL in the format example.com/random-id
 
 GET /:id - Redirects the user to the original URL
 
 GET /URL/analytics/:id - returns the clicks for the provided short id..
 
+
+
+Server Side Rendering 
+EJS, PUG, HandleBar (Template Engines)
